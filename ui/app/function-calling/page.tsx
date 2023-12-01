@@ -45,7 +45,7 @@ export default function Chat() {
 
   return (
     <div className="flex flex-col gap-6">
-      <h1 className="text-4xl">Chat</h1>
+      <h1 className="text-4xl">Weather chat</h1>
       <div className="flex flex-col gap-4">
         {messages.map((message, i) => (
           <Card key={i}>
