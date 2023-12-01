@@ -17,16 +17,17 @@ export default function Chat() {
 
   const sendMessage = async () => {
     const prevInput = input;
-    const messagesCopy = [...messages, { role: "user", content: input } as Message];
+    const messagesOld = [...messages];
+    const messagesNew = [...messages, { role: "user", content: input } as Message];
 
     setLoading(true);
-    setMessages(messagesCopy);
+    setMessages(messagesNew);
     setInput("");
 
     try {
       const result = await fetch("/api/chat", {
         method: "POST",
-        body: JSON.stringify({ messages: messagesCopy }),
+        body: JSON.stringify({ messages: messagesNew }),
       }).then((r) => r.json());
 
       const { content, role } = result.choices[0].message;
@@ -35,6 +36,7 @@ export default function Chat() {
     } catch (err) {
       console.error(err);
       setError("Could not send message right now.");
+      setMessages(messagesOld);
       setInput(prevInput);
     }
 

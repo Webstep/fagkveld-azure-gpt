@@ -2,8 +2,8 @@ import OpenAI from "openai";
 
 const apiKey = process.env["AZURE_OPENAI_API_KEY"];
 const apiBase = process.env["AZURE_OPENAI_API_BASE_URL"];
-const deploymentModel = process.env["AZURE_OPENAI_API_MODEL"] || "gpt-4";
-const apiVersion = process.env["AZURE_OPENAI_API_VERSION"] || "2023-10-01-preview";
+const deploymentModel = process.env["AZURE_OPENAI_API_MODEL"]!;
+const apiVersion = process.env["AZURE_OPENAI_API_VERSION"];
 
 const openai = new OpenAI({
   apiKey,
