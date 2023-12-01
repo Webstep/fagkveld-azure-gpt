@@ -5,7 +5,7 @@ export default function Home() {
     <div className="flex flex-col gap-4">
       <h1 className="text-4xl">WebstepGPT</h1>
       <Link href="/chat">Chat</Link>
-      <Link href="/profile">Profile</Link>
+      <Link href="/function-calling">Weather chat (Function Calling)</Link>
     </div>
   );
 }
