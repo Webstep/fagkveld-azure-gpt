@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-export default function Chat() {
+export default function ImageEdit() {
   const [input, setInput] = useState("A cute baby sea otter wearing a beret");
   const [image, setImage] = useState("");
   const [loading, setLoading] = useState(false);
