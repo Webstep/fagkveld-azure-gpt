@@ -6,6 +6,7 @@ export default function Home() {
       <h1 className="text-4xl">WebstepGPT</h1>
       <Link href="/chat">Chat</Link>
       <Link href="/function-calling">Weather chat (Function Calling)</Link>
+      <Link href="/image-edit">Edit images (Dalle-2)</Link>
     </div>
   );
 }

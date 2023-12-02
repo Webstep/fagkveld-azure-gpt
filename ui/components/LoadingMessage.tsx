@@ -9,3 +9,9 @@ export const Loading = () => (
     </div>
   </div>
 );
+
+export const LoadingImage = () => (
+  <div className="flex-1">
+    <Skeleton className=" aspect-square" />
+  </div>
+);
