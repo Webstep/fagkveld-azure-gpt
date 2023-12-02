@@ -10,8 +10,12 @@ export const LoadingMessage = () => (
   </div>
 );
 
-export const LoadingImage = () => (
-  <div className="flex-1">
-    <Skeleton className=" aspect-square" />
+type LoadingImageProps = {
+  className?: string;
+};
+
+export const LoadingImage = ({ className = "flex-1" }: LoadingImageProps) => (
+  <div className={className}>
+    <Skeleton className="aspect-square" />
   </div>
 );
