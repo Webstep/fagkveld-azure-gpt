@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChatInput } from "@/components/ChatInput";
 import { ErrorInfo } from "@/components/ErrorInfo";
-import { Loading } from "@/components/LoadingMessage";
+import { LoadingMessage } from "@/components/LoadingMessage";
 import { MessageContent } from "@/components/MessageContent";
 import type { Message } from "@/lib/types";
 
@@ -20,6 +20,7 @@ export default function Chat() {
     const messagesOld = [...messages];
     const messagesNew = [...messages, { role: "user", content: input } as Message];
 
+    setError("");
     setLoading(true);
     setMessages(messagesNew);
     setInput("");
@@ -57,7 +58,7 @@ export default function Chat() {
         ))}
       </div>
 
-      {loading && <Loading />}
+      {loading && <LoadingMessage />}
       {error && !loading && <ErrorInfo {...{ error }} />}
 
       <ChatInput
