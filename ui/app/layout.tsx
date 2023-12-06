@@ -7,8 +7,8 @@ import { Header } from "@/components/Header";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "Webstep chat",
-  description: "Webstep chat",
+  title: "WebstepGPT",
+  description: "WebstepGPT",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
