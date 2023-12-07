@@ -56,7 +56,6 @@ AZURE_OPENAI_API_VERSION=2023-12-01-preview
 ## Kjøre UI
 
 ```bash
-cd ui
 npm install
 npm run dev
 ```
