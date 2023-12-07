@@ -33,10 +33,24 @@ const functions = [
       required: ["location"],
     },
   },
+  {
+    name: "getAge",
+    description: "Get age of person.",
+    parameters: {
+      type: "object",
+      properties: {
+        name: { type: "string", description: "Name of person" },
+      },
+      required: ["person"],
+    },
+  },
 ];
 
 const functionCalls = {
   getWeather,
+  getAge: async ({ name }: { name: string }) => {
+    return `The age of ${name} is 21 years old.`;
+  },
 };
 
 export async function POST(req: Request) {
